@@ -1,6 +1,9 @@
+using BtkAkademiAIBlog.WebApi.Context;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+builder.Services.AddDbContext<BlogAIContext>();
+
 builder.Services.AddControllers();
 
 // .NET 10.0 ile gelen yerleşik OpenAPI servisi
